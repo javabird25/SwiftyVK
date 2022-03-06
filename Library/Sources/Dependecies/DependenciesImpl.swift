@@ -8,7 +8,7 @@
 
 final class DependenciesImpl: Dependencies {
     
-    private let appId: String
+    private let appId: Int
     private weak var delegate: SwiftyVKDelegate?
     private let customBundleName: String?
     private let customConfigPath: String?
@@ -50,7 +50,7 @@ final class DependenciesImpl: Dependencies {
         )
     }()
     
-    init(appId: String, delegate: SwiftyVKDelegate?, bundleName: String?, configPath: String?) {
+    init(appId: Int, delegate: SwiftyVKDelegate?, bundleName: String?, configPath: String?) {
         self.appId = appId
         self.delegate = delegate
         self.customBundleName = bundleName

@@ -9,12 +9,12 @@ protocol VKAppProxy: class {
 final class VKAppProxyImpl: VKAppProxy {
     
     private let baseUrl = "vkauthorize://authorize?"
-    private let appId: String
+    private let appId: Int
     private let urlOpener: URLOpener
     private let appLifecycleProvider: AppLifecycleProvider
     
     init(
-        appId: String,
+        appId: Int,
         urlOpener: URLOpener,
         appLifecycleProvider: AppLifecycleProvider
         ) {

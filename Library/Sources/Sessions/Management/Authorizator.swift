@@ -15,7 +15,7 @@ final class AuthorizatorImpl: Authorizator {
     private let webAuthorizeUrl = "https://oauth.vk.com/authorize?"
     private let webRedirectUrl = "https://oauth.vk.com/blank.html"
     
-    private let appId: String
+    private let appId: Int
     private var tokenStorage: TokenStorage
     private weak var tokenMaker: TokenMaker?
     private let tokenParser: TokenParser
@@ -28,7 +28,7 @@ final class AuthorizatorImpl: Authorizator {
     private var requestTimeout: TimeInterval = 10
     
     init(
-        appId: String,
+        appId: Int,
         delegate: SwiftyVKAuthorizatorDelegate?,
         tokenStorage: TokenStorage,
         tokenMaker: TokenMaker,

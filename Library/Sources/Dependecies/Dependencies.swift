@@ -14,11 +14,11 @@ protocol Dependencies:
     ShareControllerMaker { }
 
 protocol DependenciesHolder: SessionsHolderHolder, AuthorizatorHolder {
-    init(appId: String, delegate: SwiftyVKDelegate?, bundleName: String?, configPath: String?)
+    init(appId: Int, delegate: SwiftyVKDelegate?, bundleName: String?, configPath: String?)
 }
 
 extension DependenciesHolder {
-    init(appId: String, delegate: SwiftyVKDelegate?) {
+    init(appId: Int, delegate: SwiftyVKDelegate?) {
         self.init(appId: appId, delegate: delegate, bundleName: nil, configPath: nil)
     }
 }

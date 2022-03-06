@@ -3,7 +3,7 @@ import Foundation
 /// SwiftyVK entry point
 public final class VK {
     public static func setUp(
-            appId: String,
+            appId: Int,
             delegate: SwiftyVKDelegate,
             bundleName: String? = nil,
             configPath: String? = nil
